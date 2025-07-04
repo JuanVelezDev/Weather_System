@@ -18,7 +18,7 @@ const errorMessage = document.getElementById('error-message');
 
 
 async function obtenerClima(ciudad) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}&units=metric&lang=es`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric&lang=es`;
 
     try {
         const respuesta = await axios.get(url);
