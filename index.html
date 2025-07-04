@@ -1,13 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta el Clima</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Consulta el Clima</h1>
+    <div class="search-container">
+      <input type="text" id="city-input" placeholder="Ingresa una ciudad">
+      <button id="search-button">Buscar</button>
+    </div>
+    <div id="weather-result" class="weather-container hidden">
+      <h2 id="city-name"></h2>
+      <img id="weather-icon" alt="Ícono Clima">
+      <p><strong>Temperatura:</strong> <span id="temperature"></span>°C</p>
+      <p><strong>Humedad:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Velocidad del Viento:</strong> <span id="wind-speed"></span> m/s</p>
+      <p><strong>Amanecer:</strong> <span id="sunrise"></span></p>
+      <p><strong>Atardecer:</strong> <span id="sunset"></span></p>
+      <p id="error-message" class="error hidden"></p>
+    </div>
+  </div>
+  <script type="module" src="src/main.js"></script>
+</body>
 </html>
